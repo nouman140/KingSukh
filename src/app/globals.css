@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-forum), serif;
+}
+
+@layer base {
+  :root {
+    --background: 48 50% 98%; /* #FCFAF2 - Very light beige */
+    --foreground: 30 38% 17%; /* #3D2C1B - Dark Brown */
+
+    --card: 60 56% 91%; /* #F5F5DC - Warm Beige */
+    --card-foreground: 30 38% 17%; /* Dark Brown */
+
+    --popover: 48 50% 98%; /* Very light beige */
+    --popover-foreground: 30 38% 17%; /* Dark Brown */
+
+    --primary: 35 26% 52%; /* #A68B64 - Soft Brown */
+    --primary-foreground: 48 50% 98%; /* Very light beige */
+
+    --secondary: 60 56% 86%; /* Slightly darker warm beige */
+    --secondary-foreground: 30 38% 17%; /* Dark Brown */
+
+    --muted: 60 56% 94%; /* Lighter warm beige */
+    --muted-foreground: 30 38% 40%; /* Softer Dark Brown */
+
+    --accent: 35 26% 52%; /* #A68B64 - Soft Brown */
+    --accent-foreground: 48 50% 98%; /* Very light beige */
+
+    --destructive: 0 72% 51%; /* Adjusted red for better harmony */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 60 50% 80%; /* Beige border */
+    --input: 60 50% 88%; /* Beige input background */
+    --ring: 35 26% 52%; /* Soft Brown for rings */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors, derived from the main theme */
+    --sidebar-background: 60 56% 93%; /* Warm beige, slightly lighter than card */
+    --sidebar-foreground: 30 38% 17%; /* Dark Brown */
+    --sidebar-primary: 35 26% 52%; /* Soft Brown */
+    --sidebar-primary-foreground: 48 50% 98%; /* Very light beige */
+    --sidebar-accent: 35 26% 58%; /* Slightly lighter Soft Brown for hover */
+    --sidebar-accent-foreground: 48 50% 98%; /* Very light beige */
+    --sidebar-border: 60 50% 80%; /* Beige border */
+    --sidebar-ring: 35 26% 52%; /* Soft Brown */
+
+    --chart-1: 35 26% 52%; /* Soft Brown */
+    --chart-2: 48 50% 70%; /* Lighter Beige */
+    --chart-3: 60 40% 60%; /* Muted Greenish Beige */
+    --chart-4: 30 30% 65%; /* Muted Brown */
+    --chart-5: 35 20% 40%; /* Darker Soft Brown */
+  }
+
+  .dark {
+    --background: 30 20% 10%; /* Dark brown-ish */
+    --foreground: 48 50% 95%; /* Light beige */
+
+    --card: 30 20% 15%; /* Slightly lighter dark brown for cards */
+    --card-foreground: 48 50% 95%;
+
+    --popover: 30 20% 10%;
+    --popover-foreground: 48 50% 95%;
+
+    --primary: 35 26% 60%; /* Slightly lighter Soft Brown for dark mode primary */
+    --primary-foreground: 30 20% 10%; /* Dark for text on light primary */
+
+    --secondary: 30 20% 20%; /* Darker secondary */
+    --secondary-foreground: 48 50% 95%;
+
+    --muted: 30 20% 25%; /* Dark muted */
+    --muted-foreground: 48 50% 70%; /* Lighter muted text */
+
+    --accent: 35 26% 60%; /* Same as primary */
+    --accent-foreground: 30 20% 10%;
+
+    --destructive: 0 60% 45%; /* Darker red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 20% 25%; /* Dark border */
+    --input: 30 20% 22%; /* Dark input */
+    --ring: 35 26% 60%; /* Lighter Soft Brown for rings */
+    
+    /* Dark Sidebar specific colors */
+    --sidebar-background: 30 20% 12%; 
+    --sidebar-foreground: 48 50% 95%;
+    --sidebar-primary: 35 26% 60%;
+    --sidebar-primary-foreground: 30 20% 10%;
+    --sidebar-accent: 35 26% 50%; 
+    --sidebar-accent-foreground: 30 20% 10%;
+    --sidebar-border: 30 20% 25%;
+    --sidebar-ring: 35 26% 60%;
+
+    --chart-1: 35 26% 60%;
+    --chart-2: 48 50% 30%;
+    --chart-3: 60 40% 40%;
+    --chart-4: 30 30% 35%;
+    --chart-5: 35 20% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+}
